@@ -9,12 +9,16 @@ const ingredients = [
 
 const ingredientsContainerRef = document.querySelector("#ingredients");
 
-const elements = ingredients.map((element) => {
-  const itemEl = document.createElement("li");
-  itemEl.classList.add("item");
-  itemEl.textContent = element;
+const makeIngredientCollection = (options) => {
+  return options.map((option) => {
+    const itemEl = document.createElement("li");
+    itemEl.classList.add("item");
+    itemEl.textContent = option;
 
-  return itemEl;
-});
+    return itemEl;
+  });
+};
+
+const elements = makeIngredientCollection(ingredients);
 
 ingredientsContainerRef.append(...elements);
