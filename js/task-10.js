@@ -33,7 +33,11 @@ function destroyBoxes() {
 
 function createBoxes(amount) {
   const elements = [];
-  for (let i = 0, j = 30; i < amount; i += Number(input.step), j += 10) {
+  for (
+    let i = Number(input.min), j = 30;
+    i < Number(input.max);
+    i += Number(input.step), j += 10
+  ) {
     const boxEl = document.createElement("div");
     boxEl.style.height = `${j}px`;
     boxEl.style.width = `${j}px`;
