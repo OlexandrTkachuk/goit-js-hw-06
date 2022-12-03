@@ -15,7 +15,7 @@ const images = [
 
 const galeryContainerRef = document.querySelector(".gallery");
 
-const makeGalleryCollection = (array) => {
+const makeGalleryItemsMarkup = (array) => {
   return array.map(({ url, alt }) => {
     galeryContainerRef.insertAdjacentHTML(
       "beforeend",
@@ -26,4 +26,4 @@ const makeGalleryCollection = (array) => {
   });
 };
 
-makeGalleryCollection(images);
+makeGalleryItemsMarkup(images);
