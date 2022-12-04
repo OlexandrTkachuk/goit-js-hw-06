@@ -53,6 +53,5 @@ function makeDivMarkup() {
   input.addEventListener("input", () => {
     return input.value;
   });
-
   createBoxes(input.value);
 }
