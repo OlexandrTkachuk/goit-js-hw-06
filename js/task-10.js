@@ -35,7 +35,7 @@ function createBoxes(amount) {
   const elements = [];
   for (
     let i = Number(input.min), j = 30;
-    i <= amount;
+    i <= amount && amount <= 100;
     i += Number(input.step), j += 10
   ) {
     const boxEl = document.createElement("div");
